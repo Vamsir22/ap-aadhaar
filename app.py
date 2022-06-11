@@ -21,16 +21,14 @@ def final():
         for key, value in final.items():
             response = request_fun(str(value))
             final = response.text
-            print(final)
+            # print(final)
             final = json.loads(final)
-            print(type(final))
+            # print(type(final))
     return render_template("response.html",final = final)
     # except Exception as e:
     #     print("exception: ", e)
 
-app.run()
-
-
+app.run(debug=True)
 
 
 
