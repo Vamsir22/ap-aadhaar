@@ -8,8 +8,12 @@
     <table border = 1>
     {% for key, value in final.items() %}
     <tr>
-       <th> {{ key }} </th>
-       <td> {{ value }} </td>
+	{% if key == 'result' %}
+	<th> NAME </td>
+	<td> {{ final['result'][0]['CITIZEN_NAME'] }} </td>
+	{% endif %}
+	<!-- <th> {{ key }} </th> -->
+        <!-- <td> {{ value }} </td> -->
     </tr>
 
 <!--    <p>final</p>-->
